@@ -1,0 +1,9 @@
+main: com.modtools.ak.Main
+name: ModTools
+author: AnyKwey
+version: a1b12-9k
+version-api: 1.8.8
+
+commands:
+  mod:
+    permission: modtools.command.mod

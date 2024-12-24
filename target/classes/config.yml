@@ -1,0 +1,96 @@
+# Plugin Settings
+prefix: '&cModTools &f>&r '
+mysql:
+  host: localhost
+  port: 3306
+  database: database
+  user: root
+  password: ''
+active-items-immediately: false
+gamemode: 1
+fly: true
+
+# Messages
+start-message: '&aThe ModTools Plugin has been enabled successfully.'
+close-message: '&aThe ModTools Plugin has been correctly disabled.'
+
+ModerationTools:
+  Init: '&aModeration Mode has been enabled. It will take effect on the next server change.'
+  Destroy: '&cModeration Mode has been disabled. It will take effect on the next server change.'
+
+ErrorMessages:
+  PlayerOnly: '&cYou cannot execute this command here.'
+  HasNotPermission: '&cYou have not the permission to execute this command.'
+  FalseArgs: '&cError: The argument ''&f%args% &c''is not recognized!'
+
+# Moderation Items
+
+Knockback:
+  name: "&cKnockback IV"
+  lore: "&7What you choose."
+  item: WOOD_SWORD
+  slot: 1
+  knockback: 4
+  use: true
+
+Follow:
+  name: "&6Follow"
+  lore: "&7What you choose."
+  item: LEASH
+  slot: 2
+  use: true
+
+Invsee:
+  name: "&8Inventory"
+  lore: "&7What you choose."
+  item: CHEST
+  slot: 3
+  use: true
+  inventory-name: "&8%name% > Inventory"
+  inventory-size: 5*9
+
+Vanish:
+  name: "&aVanished"
+  lore: "&7What you choose."
+  item: NOTE_BLOCK
+  slot: 4
+  use: true
+  vanish: "&aYou are now invisible!"
+  unvanish: "&cYou are now visible!"
+
+Random-tp:
+  name: "&aRandom teleportation"
+  lore: "&7What you choose."
+  item: ENDER_PEARL
+  slot: 5
+  use: true
+  size-empty: "&cThere are no players to teleport to."
+  teleport-to: "&aYou have been teleported to &e%name%"
+
+Freeze:
+  name: "&bFreeze"
+  lore: "&7What you choose."
+  item: PACKED_ICE
+  slot: 6
+  use: true
+  unfreeze:
+    player: "&aYou have unfreeze &e%name%"
+    target: "&aYou have been unfreeze by %player_name%"
+  freeze:
+    player: "&bYou have freeze &e%name%"
+    target: "&bYou have been freeze by %player_name%"
+
+Running:
+  name: "&6Running"
+  lore: "&7What you choose."
+  item: COMPASS
+  slot: 7
+  use: true
+  maxDistance: 25
+
+Killer:
+  name: "&3Killer"
+  lore: "&7What you choose."
+  item: BLAZE_ROD
+  slot: 8
+  use: true
