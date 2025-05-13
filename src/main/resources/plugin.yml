@@ -1,7 +1,7 @@
 main: com.modtools.ak.Main
 name: ModTools
 author: AnyKwey
-version: a1b12-9k
+version: 2
 version-api: 1.8.8
 
 commands:
