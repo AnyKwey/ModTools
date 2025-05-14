@@ -90,7 +90,7 @@ Running:
   item: COMPASS
   slot: 7
   use: true
-  maxDistance: 25
+  maxDistance: 50
 
 Killer:
   name: "&3Killer"
