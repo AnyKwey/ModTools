@@ -128,17 +128,18 @@ public class ModItemsInteract implements Listener {
         }
 
         /**
-         * Running
+         * Runner
          */
-        Material running = new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Runner.item"))).getType();
-        if(player.getInventory().getItemInHand().getType() == running){
+        Material runner = new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Runner.item"))).getType();
+        if(player.getInventory().getItemInHand().getType() == runner){
             int maxDistance = (Main.getInstance().getConfig().getInt("Running.maxDistance"));
 
             BlockIterator iterator = new BlockIterator(player, maxDistance);
 
             while (iterator.hasNext()) {
                 Block block = iterator.next();
-                if (block.getType() != Material.AIR && block.getType().isSolid()) {
+                if(block.getType() == Material.AIR) return;
+                if (block.getType().isSolid()) {
                     Location targetLocation = block.getLocation().add(0.5, 1, 0.5);
                     targetLocation.setYaw(player.getLocation().getYaw());
                     targetLocation.setPitch(player.getLocation().getPitch());
