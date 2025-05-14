@@ -4,7 +4,6 @@ import com.modtools.ak.Main;
 import com.modtools.ak.manager.moderation.PlayerManager;
 import com.modtools.ak.utils.itemstack.ItemBuilder;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -15,11 +14,9 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.util.BlockIterator;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by AnyKwey
@@ -136,11 +133,15 @@ public class ModItemsInteract implements Listener {
         if(player.getInventory().getItemInHand().getType() == running){
             int maxDistance = (Main.getInstance().getConfig().getInt("Running.maxDistance"));
 
-            Block block = player.getTargetBlock((HashSet<Byte>) null, maxDistance);
+            BlockIterator iterator = new BlockIterator(player, maxDistance);
 
-            Location blockLoc = block.getLocation();
-
-            player.teleport(blockLoc);
+            while (iterator.hasNext()) {
+                Block block = iterator.next();
+                if (block.getType() != Material.AIR && block.getType().isSolid()) {
+                    player.teleport(block.getLocation().add(0.5, 1, 0.5));
+                    return;
+                }
+            }
         }
     }
 
