@@ -1,6 +1,5 @@
 package com.modtools.ak.manager.moderation;
 
-import com.modtools.ak.Bungee;
 import com.modtools.ak.Main;
 import com.modtools.ak.utils.itemstack.ItemBuilder;
 import org.bukkit.*;
@@ -76,11 +75,11 @@ public class PlayerManager {
                     .setLore(Main.getInstance().getConfig().getString("Freeze.lore").replace("&", "§")).toItemStack());
         }
 
-        if(Main.getInstance().getConfig().getBoolean("Running.use")) {
-            player.getInventory().setItem(Main.getInstance().getConfig().getInt("Running.slot") - 1,
-                    new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Running.item")))
-                    .setDisplayName(Main.getInstance().getConfig().getString("Running.name").replace("&", "§"))
-                    .setLore(Main.getInstance().getConfig().getString("Running.lore").replace("&", "§")).toItemStack());
+        if(Main.getInstance().getConfig().getBoolean("Runner.use")) {
+            player.getInventory().setItem(Main.getInstance().getConfig().getInt("Runner.slot") - 1,
+                    new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Runner.item")))
+                    .setDisplayName(Main.getInstance().getConfig().getString("Runner.name").replace("&", "§"))
+                    .setLore(Main.getInstance().getConfig().getString("Runner.lore").replace("&", "§")).toItemStack());
         }
 
         if(Main.getInstance().getConfig().getBoolean("Killer.use")) {
