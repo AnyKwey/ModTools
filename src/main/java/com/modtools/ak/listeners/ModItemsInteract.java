@@ -4,6 +4,7 @@ import com.modtools.ak.Main;
 import com.modtools.ak.manager.moderation.PlayerManager;
 import com.modtools.ak.utils.itemstack.ItemBuilder;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -129,7 +130,7 @@ public class ModItemsInteract implements Listener {
         /**
          * Running
          */
-        Material running = new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Running.item"))).getType();
+        Material running = new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Runner.item"))).getType();
         if(player.getInventory().getItemInHand().getType() == running){
             int maxDistance = (Main.getInstance().getConfig().getInt("Running.maxDistance"));
 
@@ -138,7 +139,10 @@ public class ModItemsInteract implements Listener {
             while (iterator.hasNext()) {
                 Block block = iterator.next();
                 if (block.getType() != Material.AIR && block.getType().isSolid()) {
-                    player.teleport(block.getLocation().add(0.5, 1, 0.5));
+                    Location targetLocation = block.getLocation().add(0.5, 1, 0.5);
+                    targetLocation.setYaw(player.getLocation().getYaw());
+                    targetLocation.setPitch(player.getLocation().getPitch());
+                    player.teleport(targetLocation);
                     return;
                 }
             }
