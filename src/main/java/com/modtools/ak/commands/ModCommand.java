@@ -31,7 +31,7 @@ public class ModCommand implements CommandExecutor {
             }
 
             if(args.length == 0){
-                if(Main.getInstance().getConfig().getBoolean("active-items-immediately")){
+                if(Main.getInstance().getConfig().getBoolean("ri2")){
                     if(ModManager.isInMod(player.getUniqueId())){
                         ModManager.remove(player.getUniqueId());
                         PlayerManager.getFromPlayer(player).destroy();
