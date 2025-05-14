@@ -84,8 +84,8 @@ Freeze:
     player: "&bYou have freeze &e%name%"
     target: "&bYou have been freeze by %player_name%"
 
-Running:
-  name: "&6Running"
+Runner:
+  name: "&6Runner"
   lore: "&7What you choose."
   item: COMPASS
   slot: 7
