@@ -1,12 +1,16 @@
 # Plugin Settings
 prefix: '&cModTools &f>&r '
+
+# MySQL
 mysql:
   host: localhost
   port: 3306
   database: database
   user: root
   password: ''
-active-items-immediately: false
+
+# Mode moderation status
+ri2: false
 gamemode: 1
 fly: true
 
