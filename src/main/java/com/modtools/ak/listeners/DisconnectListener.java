@@ -17,5 +17,8 @@ public class DisconnectListener implements Listener {
         ProxiedPlayer player = e.getPlayer();
         if(StaffManager.IsInStaffList(player)) StaffManager.removeToStaffList(player);
         ModManager.remove(player.getUniqueId());
+        if(ModManager.isInMod(player.getUniqueId())){
+            ModManager.remove(player.getUniqueId());
+        }
     }
 }
