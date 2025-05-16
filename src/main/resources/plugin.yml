@@ -9,5 +9,5 @@ commands:
     permission: modtools.command.mod
   gamemode:
     permission: modtools.command.mod
-    alias:
+    aliases:
       - gm
