@@ -26,6 +26,14 @@ ErrorMessages:
   PlayerOnly: '&cYou cannot execute this command here.'
   HasNotPermission: '&cYou have not the permission to execute this command.'
   FalseArgs: '&cError: The argument ''&f%args% &c''is not recognized!'
+  NumberException: '&cError: It must to be a number.'
+
+# Gamemode command
+
+Gamemode:
+  syntax: "&cSyntax: /gamemode <number>"
+  AlreadyInTheGamemode-message: "&cYou are already in this game mode."
+  GamemodeUpdated-message: "&aYour game mode has been updated."
 
 # Moderation Items
 

@@ -7,3 +7,7 @@ version-api: 1.8.8
 commands:
   mod:
     permission: modtools.command.mod
+  gamemode:
+    permission: modtools.command.mod
+    alias:
+      - gm

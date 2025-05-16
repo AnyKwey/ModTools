@@ -1,6 +1,7 @@
 package com.modtools.ak.events;
 
 import com.modtools.ak.Main;
+import com.modtools.ak.commands.GamemodeCommand;
 import com.modtools.ak.commands.ModCommand;
 import com.modtools.ak.listeners.ModCancels;
 import com.modtools.ak.listeners.ModItemsInteract;
@@ -30,6 +31,7 @@ public class EventRegister {
 
     public void registerCommands(){
         registerCommand("mod", new ModCommand());
+        registerCommand("gamemode", new GamemodeCommand());
     }
 
 
