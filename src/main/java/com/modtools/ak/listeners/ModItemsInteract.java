@@ -132,7 +132,7 @@ public class ModItemsInteract implements Listener {
          */
         Material runner = new ItemBuilder(Material.valueOf(Main.getInstance().getConfig().getString("Runner.item"))).getType();
         if(player.getInventory().getItemInHand().getType() == runner){
-            int maxDistance = (Main.getInstance().getConfig().getInt("Running.maxDistance"));
+            int maxDistance = (Main.getInstance().getConfig().getInt("Runner.maxDistance"));
 
             BlockIterator iterator = new BlockIterator(player, maxDistance);
             int checkedBlocks = 0;
